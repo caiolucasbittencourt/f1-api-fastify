@@ -34,3 +34,20 @@ cd f1-api-fastify
 npm install
 npm run start:dev
 ```
+
+### Rotas
+
+| Método | Rota                 | Descrição                |
+| ------ | -------------------- | ------------------------ |
+| GET    | `/`                  | Informações da API       |
+| GET    | `/health`            | Health check             |
+| GET    | `/teams`             | Lista todas as equipes   |
+| GET    | `/teams/:id`         | Detalhes de uma equipe   |
+| GET    | `/teams/:id/drivers` | Pilotos de uma equipe    |
+| GET    | `/drivers`           | Lista todos os pilotos   |
+| GET    | `/drivers/:id`       | Detalhes de um piloto    |
+| GET    | `/drivers/champions` | Campeões mundiais        |
+| GET    | `/drivers/standings` | Ranking por pontos       |
+| GET    | `/circuits`          | Lista todos os circuitos |
+| GET    | `/circuits/:id`      | Detalhes de um circuito  |
+| GET    | `/circuits/longest`  | Circuitos por tamanho    |
