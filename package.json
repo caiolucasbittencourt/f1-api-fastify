@@ -1,0 +1,36 @@
+{
+  "name": "f1-api-fastify",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API de dados da Fórmula 1 com Fastify",
+  "main": "index.js",
+  "scripts": {
+    "dist": "tsup src",
+    "start:dev": "tsx src/server.ts",
+    "start:watch": "tsx watch src/server.ts",
+    "start:dist": "npm run dist && node dist/src/index.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "keywords": [
+    "f1",
+    "formula1",
+    "api",
+    "fastify"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^20.11.30",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "fastify": "^5.7.4"
+  }
+}
