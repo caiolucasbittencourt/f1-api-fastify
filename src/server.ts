@@ -1,4 +1,5 @@
 import fastify from "fastify";
+import cors from "@fastify/cors";
 
 import { teamsRoutes } from "./routes/teams";
 import { driversRoutes } from "./routes/drivers";
@@ -7,11 +8,7 @@ import { circuitsRoutes } from "./routes/circuits";
 const server = fastify({ logger: true });
 
 // Registro do CORS
-server.addHook("onRequest", async (request, reply) => {
-  reply.header("Access-Control-Allow-Origin", "*");
-  reply.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  reply.header("Access-Control-Allow-Headers", "Content-Type");
-});
+server.register(cors);
 
 // Registro das rotas
 server.register(teamsRoutes);
